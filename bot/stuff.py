@@ -18,11 +18,7 @@ async def up(event):
 
 async def start(event):
     await event.reply(
-        f"**Send me the video which you want to compress.**\n**Uptime: {str(datetime.now() - START_TIME).split('.')[0]}**",
-        buttons=[
-            [Button.inline("HELP", data="help")],
-        ],
-    )
+
 
 async def zylern(event):
     await event.reply(
