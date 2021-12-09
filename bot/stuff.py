@@ -18,7 +18,7 @@ async def up(event):
 
 async def start(event):
     await event.reply(
-        text=Script.START_TEXT.format(update.from_user.mention),
+        text=Script.START_TEXT.format(event.sender.first_name),
         disable_web_page_preview=True,
         reply_markup=Script.START_BUTTONS
     )
