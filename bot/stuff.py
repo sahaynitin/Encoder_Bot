@@ -1,8 +1,8 @@
 # https://github.com/1Danish-00/CompressorQueue/blob/main/License> .
-
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from .worker import *
 from datetime import datetime
-
+from script import Script
 START_TIME = datetime.now()
 
 async def up(event):
@@ -18,7 +18,10 @@ async def up(event):
 
 async def start(event):
     await event.reply(
-
+        text=Script.START_TEXT.format(update.from_user.mention),
+        disable_web_page_preview=True,
+        reply_markup=Script.START_BUTTONS
+    )
 
 async def zylern(event):
     await event.reply(
